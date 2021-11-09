@@ -1,19 +1,21 @@
+
+
 {
-  "name": "nodemailer-tutorial",
+  "name": "thecafee",
   "version": "1.0.0",
-  "description": "Node Mailer tutorial in vanilla JS",
+  "description": "Official website of The Cafe",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon serve.js"
+    "dev": "nodemon server.js"
   },
-  "author": "ABHEER MEHROTRA",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "nodemailer": "^6.4.11",
-    "nodemon": "^2.0.4"
+    "nodemailer": "^6.7.0"
   }
 }
+
