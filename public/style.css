@@ -489,6 +489,17 @@ footer{
         transition: initial;
     }
 
+    .formButton{
+        font-size: 25px;
+        border-radius: 20px;
+        padding-left: 22px;
+        padding-right: 22px;
+        color: #242424;
+        background-color: aliceblue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+    }
+
     .nav-item{
         margin-left: 0 2.4rem;
         border: none;
