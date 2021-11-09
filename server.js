@@ -82,10 +82,10 @@ app.post("/send", (req, res) => {
   let mailOptions = {
     from: user,
     to: req.body.email,
-    subject: "req.body.lastname",
-    text: `First Name: ${req.body.firstname}
-    Last Name: ${req.body.lastname}
-    Message: ${req.body.subject}
+    subject:req.body.subject,
+    text: `name: ${req.body.name}
+    email: ${req.body.email}
+    message: ${req.body.message}
     `,
   };
 
