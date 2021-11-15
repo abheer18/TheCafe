@@ -1,9 +1,13 @@
+require('dotenv').config()
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;   //edited this port
-
-const user = "fitnessblog223@gmail.com";
-const pass = "@everyonecanuse";
+// const port = process.env.USER || 8080;
+// const port = process.env.PASSWORD || 8080;
+const user = process.env.USER;
+const pass = process.env.PASS;
+// const user = "fitnessblog223@gmail.com";
+// const pass = "@everyonecanuse";
 
 const nodemailer = require("nodemailer");
 

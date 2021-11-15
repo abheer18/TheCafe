@@ -650,3 +650,67 @@ footer{
         }
     }
 }
+
+
+
+
+/* NODE JS DOCS PAGE  */
+
+.first-sec{
+    background-color: antiquewhite;
+}
+
+#docs {
+    font-size: 50px;
+    color: black;
+}
+
+#api{
+    font-size: 40px;
+}
+
+.paragraph{
+    font-size: 20px;
+}
+
+
+/* form  */
+
+.containers{
+    background-color: rgb(152, 167, 255);
+    padding: 50px;
+    margin: 50px;
+}
+
+#customer{
+    font-size: 50px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:white;
+    letter-spacing: 2px;
+}
+
+.form-control{
+    font-size: 20px;
+}
+
+#sub{
+    font-size: 22px;
+}
+
+.file{
+    font-size: 25px;
+}
+
+#formFileSm{
+    width: 800px;
+    padding: 5px;
+}
+
+#comment{
+    color: white;
+}
+
+.copyright{
+    font-size: 25px ;
+    background-color: none;
+}

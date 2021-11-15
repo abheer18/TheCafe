@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link defer rel="stylesheet" href="style.css" />
+    <title>Node js</title>
+  </head>
+  <body>
+      <div id="page"></div>
+    <section class="first-sec" >
+      <div class="row">
+        <div class="col-md-6">
+          <p id="docs">NODE JS DOCS</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="api">API reference</div>
+          <p class="paragraph">
+            <br />
+            The API reference documentation provides detailed information about
+            a function or object in Node.js. This documentation indicates what
+            arguments a method accepts, the return value of that method, and
+            what errors may be related to that method. It also indicates which
+            methods are available for different versions of Node.js.<br /><br /><br />
+
+            This documentation describes the built-in modules provided by
+            Node.js. It does not document modules provided by the community.
+          </p>
+          <div class="col-md-12">
+            <p class="paragraph">
+              Learning by Examples Our "Show Node.js" tool makes it easy to
+              learn Node.js, it shows both the code and the result.
+              <br /><br /><br />
+              Example<br /><br />
+              var http = require('http');<br />
+
+              http.createServer(function (req, res) {<br />
+              res.writeHead(200, {'Content-Type': 'text/plain'});<br />
+              res.end('Hello World!');<br />
+              }).listen(8080);<br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <br />
+        <br />
+        <br />
+        <div class="col-md-12">
+          <div id="api">WHY NODE.js</div>
+        </div>
+        <div class="col-md-12">
+          <p class="paragraph">
+            <br /><br />Node.js uses asynchronous programming! A common task for
+            a web server can be to open a file on the server and return the
+            content to the client. <br />
+
+            Here is how PHP or ASP handles a file request: <br />
+
+            Sends the task to the computer's file system. <br />
+            Waits while the file system opens and reads the file. <br />
+            Returns the content to the client. <br />
+            Ready to handle the next request. <br />
+            Here is how Node.js handles a file request: <br />
+            <br />
+            Sends the task to the computer's file system. <br />
+            Ready to handle the next request. <br />
+            When the file system has opened and read the file, the server
+            returns the content to the client. <br />
+            Node.js eliminates the waiting, and simply continues with the next
+            request. <br />
+
+            Node.js runs single-threaded, non-blocking, asynchronously
+            programming, which is very memory efficient.<br /><br /><br />
+          </p>
+          <p class="paragraph">
+            What Can Node.js Do? <br />
+            Node.js can generate dynamic page content<br />
+            Node.js can create, open, read, write, delete, and close files on
+            the server<br />
+            Node.js can collect form data<br />
+            Node.js can add, delete, modify data in your database<br />
+          </p>
+        </div>
+      </div>
+      <!-- next -->
+      <div class="row">
+        <br />
+        <br />
+        <br />
+        <div class="col-md-12">
+          <div id="api">MODULES</div>
+        </div>
+        <div class="col-md-12">
+          <p class="paragraph">
+            <br /><br />To include a module, use the require() function with the
+            name of the module: <br />
+
+            Here is how PHP or ASP handles a file request: <br />
+
+            var http = require('http'); <br />
+            Now your application has access to the HTTP module, and is able to
+            create a server: <br />
+
+            http.createServer(function (req, res) { <br />
+            res.writeHead(200, {'Content-Type': 'text/html'}); <br />
+            res.end('Hello World!'); <br />
+            }).listen(8080); <br />
+            <br />
+            Create Your Own Modules <br />
+            You can create your own modules, and easily include them in your
+            applications. <br />
+
+            The following example creates a module that returns a date and time
+            object: <br />
+
+            Example <br />
+            Create a module that returns the current date and time: <br />
+
+            exports.myDateTime = function () { <br />
+            return Date(); <br />
+            }; Use the exports keyword to make properties and methods available
+            outside the module file.<br /><br /><br /><br /><br /><br />
+          </p>
+          <p class="paragraph">
+            The Built-in HTTP Module<br />
+            Node.js has a built-in module called HTTP, which allows Node.js to
+            transfer data over the Hyper Text Transfer Protocol (HTTP).<br />
+
+            To include the HTTP module, use the require() method:<br />
+
+            var http = require('http');<br />
+            Node.js as a Web Server<br />
+            The HTTP module can create an HTTP server that listens to server
+            ports and gives a response back to the client.<br />
+
+            Use the createServer() method to create an HTTP server:<br />
+
+            Example<br />
+            var http = require('http');<br />
+
+            //create a server object:<br />
+            http.createServer(function (req, res) {<br />
+            res.write('Hello World!'); //write a response to the client<br />
+            res.end(); //end the response<br />
+            }).listen(8080); //the server object listens on port 8080<br />
+            The function passed into the http.createServer() method, will be
+            executed when someone tries to access the computer on port 8080.<br />
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="col-md-12">
+          <a href="https://www.w3schools.com/nodejs/nodejs_uploadfiles.asp"
+            ><h1>FOR MORE REFERENCE !</h1></a
+          >
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
