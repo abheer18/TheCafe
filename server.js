@@ -6,8 +6,6 @@ const port = process.env.PORT || 3000;   //edited this port
 // const port = process.env.PASSWORD || 8080;
 const user = process.env.USER;
 const pass = process.env.PASS;
-// const user = "fitnessblog223@gmail.com";
-// const pass = "@everyonecanuse";
 
 const nodemailer = require("nodemailer");
 
@@ -19,11 +17,11 @@ app.use(express.urlencoded({ extended: false }));
 app.post("/send", (req, res) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
-    port: 587,
+    port: 465,
     secure: false,
     auth: {
       user: user,
-      pass: pass,
+      password: pass,
     },
     tls: {
       rejectUnauthorized: false,
