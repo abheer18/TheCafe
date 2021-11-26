@@ -14,6 +14,13 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+const connection = require('./database/db');
+
+connection.connect((err) => {
+  if (err) throw err;
+  console.log("Database connected")
+})
+
 app.post("/send", (req, res) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
@@ -27,6 +34,16 @@ app.post("/send", (req, res) => {
       rejectUnauthorized: false,
     },
   });
+
+  const SQL = `INSERT INTO feedback (NAME, EMAILID, SUBJECT, MESSAGE) SET ?`;
+
+  const query = connection.query(SQL, req.body, (err, output) => {
+    if (err) {
+      throw err;
+    } else {
+      res.send("Query run successfully");
+    }
+  } )
 
   let mailOptions = {
     from: user,
