@@ -12,7 +12,7 @@ const nodemailer = require("nodemailer");
 app.use(express.static("public"));
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 const connection = require('./database/db');
 
@@ -34,12 +34,14 @@ app.post("/send", (req, res) => {
       rejectUnauthorized: false,
     },
   });
+  var x = req.body
+console.log(req.body)
+  const SQL = "INSERT INTO `feedback` SET `NAME`=?,`EMAILID`=?,`SUBJECT`=?,`MESSAGE`=?";
 
-  const SQL = `INSERT INTO feedback (NAME, EMAILID, SUBJECT, MESSAGE) SET ?`;
-
-  const query = connection.query(SQL, req.body, (err, output) => {
+  const query = connection.query(SQL, [x.NAME,x.EMAILID,x.SUBJECT,x.MESSAGE], (err, output) => {
     if (err) {
-      throw err;
+      // throw err;
+      console.log(err.message)
     } else {
       res.send("Query run successfully");
     }
@@ -70,9 +72,11 @@ message: ${req.body.message}
     }
   });
 
-  res.send(`message send ${JSON.stringify(req.body)}`);
+  // res.send(`message send ${JSON.stringify(req.body)}`);
 });
 
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
 });
+
+// NAME, EMAILID, SUBJECT ,MESSAGE
