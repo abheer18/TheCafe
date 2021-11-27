@@ -67,9 +67,9 @@ app.post("/send", (req, res) => {
             console.log(error);
           } else {
             console.log("Email sent: " + info.response);
-            res.status(200).json({
-              emailMessage: `message send ${JSON.stringify(req.body)}`,
-            });
+            // res.status(200).json({
+            //   emailMessage: `message send ${JSON.stringify(req.body)}`,
+            // });
           }
         });
       }
