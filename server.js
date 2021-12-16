@@ -1,4 +1,5 @@
 require("dotenv").config(".env");
+const { response } = require("express");
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000; //edited this port
@@ -19,8 +20,11 @@ connection.connect((err) => {
   if (err) throw err;
   console.log("Database connected");
 });
-
-app.post("/send", (req, res) => {
+app.get("/form", (req, res) => {
+  res.status(200).sendFile('public/form.html', { root:__dirname
+  })
+})
+app.post("/thank", (req, res) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -41,9 +45,11 @@ app.post("/send", (req, res) => {
         // throw err;
         console.log(err.message);
       } else {
-        res.status(200).json({
-          dbMessage: "Query Run successfully",
-        });
+        // res.status(200).json({
+        //   dbMessage: "Query Run successfully",
+        // });
+        res.status(200).sendFile('public/thank.html', { root:__dirname
+})
 
         let mailOptions = {
           from: user,
