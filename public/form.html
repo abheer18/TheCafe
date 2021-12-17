@@ -10,17 +10,27 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
     <link defer rel="stylesheet" href="style.css" />
     <title>Contact us</title>
   </head>
   <body>
     <div class="containers m-0">
       <div class="formFeedback">
-        <p id="customer" style="margin-top: 1em">Customer Feedback</p>
+        <div class="row">
+          <div class="col-md-9">
+            <p id="customer" style="margin-top: 1em">F E E D B A C K</p>
+          </div>
+          <div class="col-md-3">
+            <img class="formImage" src="img/undraw_certificate_re_yadi.svg">
+          </div>
+      </div>
         <div class="row">
           <div class="col-md-12">
             <div class="section-title">
-              <p class="paragraph">Please provide the feedback</p>
+            
               <hr />
               <form id="contact-form" method="POST" action="/thank">
                 <div class="form-group">
@@ -96,12 +106,19 @@
                     />
                   </div>
                 </div>
+                <div class="container">
+                <div class="row">
+                  <div class="col-md-5"></div>
+                  <div class="col-md-7">
                 <input
                   type="submit"
                   value="submit"
-                  class="btn btn-dark"
+                  class="btn"
                   id="sub"
                 />
+              </div>
+              </div>
+              </div>
               </form>
             </div>
           </div>
